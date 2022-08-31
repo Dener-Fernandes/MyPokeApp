@@ -1,0 +1,16 @@
+{
+  "name": "my_poke_app",
+  "version": "1.0.0",
+  "main": "src/config/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon ./src/config/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
