@@ -6,8 +6,7 @@ class LisPokemonsController {
 
     const allPokemons = await listPokemonsUseCase.list();
 
-
-    return response.json({ pokemons: allPokemons.data.results });
+    return response.json({ pokemons: allPokemons });
   }
 }
 
