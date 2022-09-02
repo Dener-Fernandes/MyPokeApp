@@ -1,9 +1,11 @@
 const express = require("express");
 
+const ListPokemonsController = require("../models/pokemons/listPokemons/ListPokemonsController");
+
+const listPokemonsController = new ListPokemonsController();
+
 const pokemonsRoutes = express.Router();
 
-pokemonsRoutes.get("/", (req, res) => {
-  return res.json({ message: "Hello" });
-});
+pokemonsRoutes.get("/", listPokemonsController.handle);
 
 module.exports = pokemonsRoutes;
