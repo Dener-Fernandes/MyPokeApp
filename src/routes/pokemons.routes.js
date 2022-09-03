@@ -1,11 +1,11 @@
 const express = require("express");
 
-const ListPokemonsController = require("../models/pokemons/listPokemons/ListPokemonsController");
+const GetPokemonsFromAPIController = require("../models/pokemons/listPokemons/GetPokemonsFromAPIController");
 
-const listPokemonsController = new ListPokemonsController();
+const getPokemonsFromAPIController = new GetPokemonsFromAPIController();
 
 const pokemonsRoutes = express.Router();
 
-pokemonsRoutes.get("/", listPokemonsController.handle);
+pokemonsRoutes.get("/", getPokemonsFromAPIController.handle);
 
 module.exports = pokemonsRoutes;
