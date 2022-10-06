@@ -1,6 +1,8 @@
+import { Request, Response } from "express";
+import { GetPokemonsFromAPIUseCase } from "./GetPokemonsFromAPIUseCase";
+
 class GetPokemonsFromAPIController {
-  async handle(request, response) {
-    const GetPokemonsFromAPIUseCase = require("./GetPokemonsFromAPIUseCase");
+  async handle(request: Request, response: Response): Promise<Response> {
 
     const getPokemonsFromAPIUseCase = new GetPokemonsFromAPIUseCase();
 
@@ -10,5 +12,4 @@ class GetPokemonsFromAPIController {
   }
 }
 
-module.exports = GetPokemonsFromAPIController
-  ;
+export { GetPokemonsFromAPIController };

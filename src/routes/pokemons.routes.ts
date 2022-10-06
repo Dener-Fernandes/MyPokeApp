@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 
-const GetPokemonsFromAPIController = require("../models/pokemons/listPokemons/GetPokemonsFromAPIController");
+import { GetPokemonsFromAPIController } from "../modules/pokemons/useCases/listPokemons/GetPokemonsFromAPIController";
 
 const getPokemonsFromAPIController = new GetPokemonsFromAPIController();
 
@@ -8,4 +8,4 @@ const pokemonsRoutes = express.Router();
 
 pokemonsRoutes.get("/", getPokemonsFromAPIController.handle);
 
-module.exports = pokemonsRoutes;
+export { pokemonsRoutes };
