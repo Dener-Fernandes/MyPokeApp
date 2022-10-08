@@ -1,6 +1,6 @@
 import express from "express";
 
-import { GetPokemonsFromAPIController } from "../modules/pokemons/useCases/listPokemons/GetPokemonsFromAPIController";
+import { GetPokemonsFromAPIController } from "../modules/pokemons/useCases/getPokemonsFromAPI/GetPokemonsFromAPIController";
 
 const getPokemonsFromAPIController = new GetPokemonsFromAPIController();
 

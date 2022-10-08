@@ -1,8 +1,7 @@
-import { Pokemon } from "modules/pokemons/infra/entities/Pokemon";
+import { Pokemon } from "../../infra/entities/Pokemon";
 import { api } from "../../../../services/api";
 
 interface IRequest {
-  id: number;
   pokemon: {
     name: string
   };
@@ -27,7 +26,6 @@ class GetPokemonsFromAPIUseCase {
       let pokemon = await api.get<IRequest>(urlPokemonInfo);
 
       allPokemonsInfo.push({
-        id: pokemon.data.id,
         name: pokemon.data.pokemon.name,
         image: pokemon.data.sprites.front_default,
       });
